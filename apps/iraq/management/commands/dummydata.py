@@ -2,22 +2,44 @@
 # vim: et ts=4 sw=4
 
 import random
-from django.core.management.base import NoArgsCommand
+from optparse import make_option
+from django.core.management.base import BaseCommand
 from apps.reporters.models import PersistantBackend, PersistantConnection
 from apps.poll.models import Question, User, UserResponse
 from apps.charts.models import District
 
 
-class Command(NoArgsCommand):
-    CHOICE_ENTROPY   = 20
-    DISTRICT_ENTROPY = 5
-    RESPONSES        = 100
+class Command(BaseCommand):
+    help = "Generates some dummy data to populate the website."
+    args = "[optional number of votes]"
 
-    def handle_noargs(self, **options):
-        self.districts = self._districts()
+    option_list = BaseCommand.option_list + (
+        make_option('--choice-entropy',   dest='choice_entropy',   default='20'),
+        make_option('--district-entropy', dest='district_entropy', default='5'),
+        make_option('--age-entropy',      dest='age_entropy',      default='5'))
 
-        for n in xrange(self.RESPONSES):
+    def handle(self, num_votes='1000', **options):
+        num_votes = int(num_votes)
+
+        self.choice_entropy   = int(options['choice_entropy'])
+        self.district_entropy = int(options['district_entropy'])
+        self.age_entropy      = int(options['age_entropy'])
+
+        print "Generating %d votes with entropy: %d/%d/%d" %\
+            (num_votes, self.choice_entropy, self.district_entropy, self.age_entropy)
+
+        self.districts = self._zipped_ratios(
+            District.objects.all(),
+            self.district_entropy)
+
+        self.ages = self._zipped_ratios(
+            range(2, 18),
+            self.age_entropy)
+
+        for n in xrange(num_votes):
             self.random_answer()
+
+        print "Done."
 
     @property
     def _backend(self):
@@ -39,7 +61,7 @@ class Command(NoArgsCommand):
         user = User.objects.create(
             connection = self._connection,
             gender = random.choice('mf'),
-            age = random.randint(2, 18),
+            age = self._random_choice(self.ages),
             governorate = district.governorate.code,
             district = district.code)
 
@@ -48,7 +70,7 @@ class Command(NoArgsCommand):
             question=question,
             user=user)
 
-        #print "Responded %s to Q#%d in %s district." %\
+        #print "Voted %s to Q#%d in %s district." %\
         #    (response.choice.code, question.pk, district.name)
 
     @staticmethod
@@ -64,12 +86,7 @@ class Command(NoArgsCommand):
     def _choices(self, question):
         return self._zipped_ratios(
             question.choice_set.all(),
-            self.CHOICE_ENTROPY)
-
-    def _districts(self):
-        return self._zipped_ratios(
-            District.objects.all(),
-            self.DISTRICT_ENTROPY)
+            self.choice_entropy)
 
     def _questions(self, district):
         if not hasattr(district, "_questions"):
