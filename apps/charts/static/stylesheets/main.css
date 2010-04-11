@@ -163,20 +163,6 @@ a:hover {
 	background: none;
 	color: #dcd7c7;
 }
-.secondary_links {
-	float: right;
-	width: 25%;
-}
-.secondary_links li a {
-	padding-left: 22px;
-}
-.secondary_links .download a {
-	background: url(../img/download_icon.gif) no-repeat 0 50%;
-	margin-right: 24px;
-}
-.secondary_links .print a {
-	background: url(../img/print_icon.gif) no-repeat 0 50%;
-}
 #poll_questions {
 	background:transparent url(../img/bg_poll_q.gif) repeat-x scroll 0 100%;
 	overflow:hidden;

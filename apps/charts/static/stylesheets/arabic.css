@@ -90,20 +90,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 		margin-left:12px;
 		padding-left:20px;
 }
-.secondary_links {
-		float:left;
-}
-.secondary_links li a, .secondary_links li.download a, .secondary_links li.print a {
-		padding-left:0;
-		padding-right:22px;
-		background-position: 100% 50%;
-}
-.secondary_links li.download a {
-		margin-right:0;
-}
-.secondary_links li.print a {
-		margin-right:24px;
-}
 .question_section h2, .question_section ol {
 		margin-left:0;
 		margin-right:10px;
