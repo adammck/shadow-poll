@@ -50,7 +50,8 @@ msgstr "تحميل"
 msgid "Print"
 msgstr "طباعة"
 
-msgid "AN IRAQ FIT FOR CHILDREN"
+# this still reads "AN IRAQ FIT FOR CHILDREN" in arabic
+msgid "Iraq Fit for Children: Building Iraq's Future"
 msgstr "&nbsp;&nbsp;عراق يلائم الأطفال"
 
 msgid "Home"
