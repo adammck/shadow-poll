@@ -8,9 +8,7 @@
 <script src="/static/charts/javascripts/graphs.js"></script>
 <script src="/static/charts/javascripts/map.js" ></script>
 <script src="/static/charts/javascripts/map_results.js" ></script>
-<script src="/static/charts/javascripts/map_mdg.js" ></script>
 <script src="/static/charts/javascripts/language_switcher.js"></script>
-<script src="/static/charts/javascripts/layer_switcher.js"></script>
 <script src="/static/charts/javascripts/filters.js"></script>
 {% endblock %}
 
@@ -37,67 +35,6 @@
 {% block map_container %}
 <div id="map_container">
 <div id="map" style="widh:500px; height:465px;"></div>
- <div id="map_layer_overlay" class="map_layer">
-            <form>
-              <fieldset>
-                <legend><span><a class="expand" href="javascript: void(0);">MDG Indicators Data</a></span></legend>
-                <div id="expandable_content" style="display: none;">
-                  <div class="field_container">
-                    <input class="mdg_indicators" name="map_layer" type="radio" value="poverty_overlay" id="poverty"  />
-                    <label for="poverty">Poverty Indicator</label>
-                  </div>
-                  <div class="field_container">
-                    <input  class="mdg_indicators" name="map_layer" type="radio" value="underweigh_overlay" id="under_weight"  />
-                    <label for="under_weight">Under weight indicator</label>
-                  </div>
-                  <div class="field_container">
-                    <input class="mdg_indicators" name="map_layer" type="radio" value="infantmort_overlay" id="infant_mort" />
-                    <label for="infant_mort">Infant mortality indicator</label>
-                  </div>
-                  <div class="field_container">
-                    <input class="mdg_indicators" name="map_layer" type="radio" value="under5mort_overlay" id="Under_five" />
-                    <label for="Under_five">Under five mortality indicator</label>
-                  </div>
-                  <div class="field_container">
-                    <input class="mdg_indicators" name="map_layer" type="radio" value="primary_enrollment_overlay" id="primary_enrollment" />
-                    <label for="primary_enrollment">Primary Enrollment</label>
-                  </div>
-                  <div class="field_container">
-                    <input class="mdg_indicators" name="map_layer" type="radio" value="intermediate_enrollment_overlay" id="intermediate_enrollment" />
-                    <label for="intermediate_enrollment">Intermediate Enrollment</label>
-                  </div>
-                  <div class="field_container">
-                    <input class="mdg_indicators" name="map_layer" type="radio" value="secondary_enrollment_overlay" id="secondary_enrollment" />
-                    <label for="secondary_enrollment">Secondary Enrollment</label>
-                  </div>
-                  <div class="field_container">
-                    <input class="mdg_indicators" name="map_layer" type="radio" value="femaletomale_enrollment_overlay" id="femaletomale_enrollment" />
-                    <label for="femaletomale_enrollment">Female to Male Enrollment</label>
-                  </div>
-                  <div class="field_container">
-                    <input class="mdg_indicators" name="map_layer" type="radio" value="improved_drinking_water_overlay" id="improved_drinking_water" />
-                    <label for="improved_drinking_water">Improved Drinking Water</label>
-                  </div>
-                  <div class="field_container">
-                    <input class="mdg_indicators" name="map_layer" type="radio" value="improved_sanitation_overlay" id="improved_sanitation" />
-                    <label for="improved_sanitation">Improved Sanitation Facility</label>
-                  </div>
-                </div>
-              </fieldset>
-            </form>
-</div>
-<div id="map_legend_trigger"> <a href="javascript:void(0);">+</a> </div>
-   <div id="mdg_legends" style="display: none;">
-		 <p id="mdg_indicator_text">MDG Indicator</p>
-            <ul>
-              <li><span class="legend_color" style="background-color: #FC0"></span><span class="legend_text">0%-99%</span></li>
-              <li><span class="legend_color" style="background-color: #F63"></span><span class="legend_text">10%-19.99%</span></li>
-              <li><span class="legend_color" style="background-color: #F36"></span><span class="legend_text">20%-29.99%</span></li>
-              <li><span class="legend_color" style="background-color: #F03"></span><span class="legend_text">30%-39.99%</span></li>
-              <li><span class="legend_color" style="background-color: #C033"></span><span class="legend_text">40%+</span></li>
-            </ul>
-            <div id="map_legend_close"> <a href="javascript:void(0);">[x]</a> </div>
-    </div>
 </div>
 {% endblock %}
         

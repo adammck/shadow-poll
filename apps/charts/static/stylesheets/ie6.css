@@ -26,13 +26,6 @@
 .nav_questions ul.side_nav li.active a {
 	width: 139px;
 }
-#map_layer_overlay {
-	width: 260px;
-}
-#map_layer_overlay legend{
-	
-	margin: 0;
-}
 
 /* Button */
 .main_button input {
