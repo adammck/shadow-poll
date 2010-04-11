@@ -189,13 +189,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 #language_menu ul li, #top_menu ul li, #poll_questions ul li, .response_category ul li {
 		float:right;
 }
-#sub_sections .column {
-		float: right;
-}
-#sub_sections .first h3, #sub_sections .first p, #sub_sections .first ul #sub_sections .first div {
-		padding-right:10px;
-		padding-left:0px;
-}
 #footer .unicef_logo {
 		text-align:left;
 }

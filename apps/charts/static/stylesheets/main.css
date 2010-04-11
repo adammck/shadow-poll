@@ -212,25 +212,6 @@ a:hover {
 	padding: 15px 10px;
 	margin: 0;
 }
-#sub_sections {
-	background: #fff;
-	border-top: 1px solid #C4C1BC;
-	overflow: hidden
-}
-#sub_sections h3 {
-	background: #f3f1eb;
-	padding: 5px 0;/*font-size: 1.3em;*/
-}
-#sub_sections .first h3, #sub_sections .first p, #sub_sections .first ul #sub_sections .first div {
-	padding-left: 10px;
-}
-#sub_sections .column {
-	width: 300px;
-	float: left;
-}
-#sub_sections .first {
-	width: 400px;
-}
 #main {
 	float: left;
 	width: 800px;

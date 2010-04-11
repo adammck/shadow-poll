@@ -218,30 +218,6 @@
 
 {% block footer %}
 <div id='footer'>
-   
-    <div id="sub_sections">
-        <div class="column  first">
-            <h3>Legal</h3>
-
-            <p> copyright + Legal </p>
-        </div>
-        <div class="column  ">
-            <h3>{% trans 'Poll Questions' %}</h3>
-            <ul>
-							{% for ques in questions %}
-                <li><a href="/charts/question{{ques.id}}"> {% trans ques.text %}</a></li>
-								{% endfor %}
-            </ul>
-        </div>
-        <div class="column  last">
-            <h3>{% trans 'Sections' %}</h3>
-            <ul>
-                <li><a href="/charts">{% trans 'Home' %}</a></li>
-                <li><a href="/about/unicef">{% trans 'About' %}</a></li>
-                <li><a href="/charts/question1">{% trans 'Poll' %}</a></li>
-            </ul>
-        </div>
-    </div>
     <div class="unicef_logo">
 {% ifequal LANGUAGE_CODE "ar"%}
         <a href="http://www.unicef.org/" target="_blank" title="UNICEF - United for children"><img
