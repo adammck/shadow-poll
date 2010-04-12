@@ -214,7 +214,7 @@ a:hover {
 }
 #main {
 	float: left;
-	width: 800px;
+	width: 820px;
 }
 #content_area .question_section {
 	padding: 18px 0;
@@ -240,7 +240,7 @@ a:hover {
 }
 #map_container {
 	float: left;
-	width: 600px;
+	width: 820px;
 }
 #chart_container {
 	clear:both;
@@ -255,7 +255,6 @@ a:hover {
 /* Side bar */
 #sidebar {
 	width: 180px;
-	margin: 0 10px;
 	float: right;
 	position: relative;
 }
@@ -347,28 +346,26 @@ a:hover {
 }
 /* Filter Area */
 #filter_container {
-	float: right;
-	width: 198px;
+	float: left;
+	width: 25%;
 	font-size: 0.8em;
-	border-right:1px solid #C4C1BC;
 	background: #fff;
 }
 .filter_section {
-	height: 281px;
-	border-bottom: 1px solid #C4C1BC;
+	height: 190px;
+	border-left: 1px solid #C4C1BC;
+	border-right: 1px solid #C4C1BC;
 }
 .filter_section fieldset legend {
 	background: #eeeae2;
-	border-bottom:1px solid #C4C1BC;
-	border-top:1px solid #C4C1BC;
 	color:#404040;
 	font-weight:bold;
-	padding: 5px 0 5px 10px;
 	text-transform:uppercase;
+	width: 100%;
 }
 .filter_section fieldset legend span {
 	display: block;
-	width: 188px;
+	padding: 5px;
 	font-size:0.95em;
 }
 .filter_section .field_container {
@@ -378,7 +375,6 @@ a:hover {
 	margin-left:10px;
 }
 .filter_section #gender_slider, .filter_section #age_slider {
-	width: 170px;
 	margin-left: 10px;
 	margin-right: 10px;
 }
@@ -407,6 +403,13 @@ a:hover {
 }
 .filter_section label.lbl_left {
 	text-align: left;
+}
+.keys_section h3 {
+	background: #eeeae2;
+	font-size: 12.5px;
+	padding: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 .keys_section ul {
 	list-style: none;
@@ -517,22 +520,33 @@ a:hover {
 }
 
 	#chart_container .keys_section {
-		width: 30%;
+		width: 25%;
 		float: left;
-		font-size: 80%;
+		font-size: 70%;
 	}
 
-		#chart_container .keys_section ul {
-			margin-right: 10px;
-		}
-
 	#chart_container .chart_bar {
-		width: 70%;
+		width: 50%;
 		float: right;
 	}
 
+		#chart_container .chart_bar h3,
+		#chart_container .chart_bar #chart,
+		#chart_container .chart_bar .chart_note {
+			margin-left: 10px;
+		}
+
 .response_criteria, .top_concern {
 	display: block;
+}
+/* match the 'filter map by' header, to the left */
+.response_criteria {
+	background: #eeeae2;
+	margin-left: -10px;
+	font-size: 12.5px;
+	padding: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 .top_concern {
 	font-size: 1.75em;
@@ -541,6 +555,7 @@ a:hover {
 .chart_note {
 	color:#91886F;
 	float:right;
+	margin-right: 10px;
 	font-size: 0.70em;
 	margin-top: -45px;
 	font-weight: bold;
