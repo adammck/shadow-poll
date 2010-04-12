@@ -132,14 +132,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 #main {
 		float:right;
-		width:800px;
 }
 #sidebar {
 		float:left;
 }
 #filter_container {
-		border-left:1px solid #C4C1BC;
-		border-right:0;
 		float:left;
 }
 #map_container {
@@ -148,9 +145,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 #chart_container {
 		border-width: 1px 0 0 1px;
 		float:right;
-}
-.filter_section fieldset legend {
-		padding: 5px 10px 5px 0;
 }
 .nav_questions ul.side_nav {
 		text-align: right;
@@ -209,10 +203,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 .response_category ul li span {
 		background-position: 0 -170px;
 		padding-right: 15px;
-}
-
-.filter_section {
-		height:340px;
 }
 
 /* Messages */
