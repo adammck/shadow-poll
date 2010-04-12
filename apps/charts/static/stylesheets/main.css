@@ -508,20 +508,29 @@ a:hover {
 	background-position:  100% -260px;
 	color: #075cb9;
 }
-.chart_results {
-	float: left;
-	width: 100%;
-}
-.chart_desc, .chart_details {
-	float: left;
-	width: 50%;
-}
 .chart_desc p {
 	padding: 10px;
 }
-.chart_bar {
-	padding: 10px 18px;
+
+#chart_container .chart_restuls {
+	clear: both;
 }
+
+	#chart_container .keys_section {
+		width: 30%;
+		float: left;
+		font-size: 80%;
+	}
+
+		#chart_container .keys_section ul {
+			margin-right: 10px;
+		}
+
+	#chart_container .chart_bar {
+		width: 70%;
+		float: right;
+	}
+
 .response_criteria, .top_concern {
 	display: block;
 }

@@ -9,8 +9,8 @@
  */
 
 window.onload=function() {
-    var canvasWidth = 390;
-    var factor = (canvasWidth/107);
+    var canvasWidth = 560; // 70% (.chart_bar) of 800px (#main)
+    var factor = canvasWidth/100;
 
     var paper = Raphael(document.getElementById("chart"), canvasWidth, 120);
 	var x = 0;
